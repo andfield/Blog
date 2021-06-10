@@ -8,7 +8,7 @@ function Header({ links }) {
 
         {/* Button Div */}
         <div className="flex flex-grow justify-evenly items-center max-w-sm">
-          {links.map((link) => (
+          {links.map((link, index) => (
             <a
               className="text-base leading-6 font-semibold
                        hover:text-green-500 transition-colors
@@ -20,6 +20,7 @@ function Header({ links }) {
                         font-serif
                         text-gray-700
                         "
+              key={index}
             >
               {link}
             </a>
